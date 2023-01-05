@@ -1,1 +1,2 @@
 This pulls down the Urbanist font pack from Google Fonts, extracts, sets as variable, then loops through and installs into fonts and HKLM.
+A restart is required for the fonts to be enabled.
