@@ -8,3 +8,5 @@ foreach ($font in $fonts)
    New-ItemProperty -Name $font.Name -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Fonts" -PropertyType string -Value $font.Name -Force -ErrorAction SilentlyContinue
 }
 read-host "press enter to exit"
+Remove-item $psscriptroot\font -force
+Remove-item $psscriptroot\Urbanist.zip -force
