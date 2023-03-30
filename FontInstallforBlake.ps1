@@ -1,3 +1,5 @@
+function fontinstall
+{
 invoke-webrequest -uri "https://fonts.google.com/download?family=Urbanist" -outfile $psscriptroot\Urbanist.zip
 expand-archive -path $psscriptroot\urbanist.zip -destinationpath $psscriptroot\font
 $fonts = get-childitem $psscriptroot\font\static
@@ -9,3 +11,5 @@ foreach ($font in $fonts)
 }
 Remove-item $psscriptroot\font -force
 Remove-item $psscriptroot\Urbanist.zip -force
+}
+fontinstall
